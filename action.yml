@@ -1,11 +1,12 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+name: 'Channel ID for preview deployments per branch or Pull Request'
+description: 'A GitHub action to generate a Channel ID for preview deployments.'
+author: 'Erich N Quintero (https://quintsys.com)'
+branding:
+  icon: 'globe'
+  color: 'blue'
 runs:
   using: 'node16'
   main: 'dist/index.js'
+outputs:
+  channelID:
+    description: The ID of the channel to deploy to.
